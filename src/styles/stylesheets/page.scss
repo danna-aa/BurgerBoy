@@ -1,3 +1,7 @@
+body {
+  background-color: #061214;
+}
+
 #root {
   // font-family: 'Press Start 2P', cursive;
   // font-family: 'Unica One', cursive;
@@ -16,9 +20,14 @@
   align-items: center;
 }
 
+#game {
+  // border: 2px solid #061214;
+  // height: fit-content;
+  // width: fit-content;
+}
+
 .title {
   font-family: 'Press Start 2P', cursive;
-
 
   font-weight: 700;
   font-size: 6vw;
