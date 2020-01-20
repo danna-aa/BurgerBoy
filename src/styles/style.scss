@@ -1,3 +1,16 @@
+@import "./stylesheets/reset.scss";
+@import "./stylesheets/page.scss";
+
+
 .hello {
   color: red;
+}
+
+#root {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  background-image: url("../assets/pageBackground/Sketch_3_color-22.gif");
+  background-position: cover;
+  width: 100vw;
+  height: 100vh;
 }

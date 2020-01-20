@@ -1,0 +1,31 @@
+#root {
+  // font-family: 'Press Start 2P', cursive;
+  // font-family: 'Unica One', cursive;
+  // font-family: 'PT Mono', monospace;
+  font-family: 'Monoton', cursive;
+
+  background-image: url("../assets/pageBackground/Sketch_3_color-22.gif");
+  background-size: cover;
+  background-position-y: center;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+
+
+  font-weight: 700;
+  font-size: 6vw;
+  color: #F6E0C0;
+  margin: 3vw;
+  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-color: #061214;
+  
+}
+
