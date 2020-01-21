@@ -6,10 +6,11 @@ import { hitTest } from "../scripts/functions/hitTest";
 class Game {
   constructor(app) {
     this.app = app;
-    this.placementX = 0;
+    this.placementX = 70;
     this.placementY = 250;
     this.platforms = [];
     this.burgerBoy = null;
+    this.count = -1;
   }
 
   setup() {
@@ -48,11 +49,24 @@ class Game {
   }
 
   addPlatform() {
-    let platform = new Platform(this.app, this.burgerBoy);
+    let platform = new Platform(this.app, this.burgerBoy, this.count);
     platform.add(this.placementX, this.placementY);
-    this.platforms.push(platform);
-    this.placementX += 220;
+    this.count += 1
+    // this.platforms.push(platform);
+    // if (this.count < 20) {
+    //   this.placementX += 220;
+    // } else if (this.count < 40) {
+    //   this.placementX += 250;
+    // } else if (this.count < 60) {
+    //   this.placementX += 280;
+    // } else {
+    //   this.placementX += 310;
+    // }
+
+    this.placementX += 280;
+
     this.randomizeY();
+    
   }
 
 

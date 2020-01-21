@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let app = new PIXI.Application({
     width: 500,
-    height: 350,
+    height: 300,
     // antialias: true,
     // transparent: false,
     resolution: 2,
@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   page.appendChild(app.view);
 
   let game = new Game(app);
-
-
 
   PIXI.Loader.shared
     .add("burgerBoy", "../src/assets/characters/burgerBoy/guy.json")

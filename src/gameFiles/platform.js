@@ -1,13 +1,15 @@
 import { hitTest } from "../scripts/functions/hitTest";
 
 class Platform {
-  constructor(app, burgerBoy) {
+  constructor(app, burgerBoy, count) {
     this.app = app;
     this.texture = null;
     this.sprite = null;
     this.state = null;
     this.container = null;
     this.burgerBoy = burgerBoy;
+    // this.counted = false;
+    this.count = count;
   }
 
   add(placementX, placementY) {
@@ -32,12 +34,28 @@ class Platform {
     // this.sprite.vx = 1;
     // this.sprite
     if (window.state === "play") {
+      // if (this.count <= 20) {
+      //   this.sprite.position.x -= 2;
+      // } else if ( this.count <= 40) {
+      //   this.sprite.position.x -= 2.75;
+      // } else if (this.count <= 60) {
+      //   this.sprite.position.x -= 3.5;
+      // } else {
+      //   this.sprite.position.x -= 4.25;
+      // }
 
-      this.sprite.position.x -= 2;
+              this.sprite.position.x -= 3.5;
+
+
     } 
     if (hitTest(this.burgerBoy.guy, this.sprite)) {
       console.log("collision!");
       this.burgerBoy.isOnPlatform();
+      // if (this.counted === false) {
+      //   this.counted = true;
+        
+      // }
+      console.log(window.cunter);
       // this.burgerBoy.isOnPlatform();
       
       // console.log("platformed =");

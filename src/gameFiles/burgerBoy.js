@@ -13,7 +13,6 @@ class BurgerBoy {
     this.guy = new PIXI.AnimatedSprite(this.spritesheet.animations["idle"]);
 
     this.guy.animationSpeed = 0.15;
-    this.guy.zOrder = 100000000000;
     this.guy.vy = 0;
     this.guy.vx = 0;
     this.guy.play();
@@ -21,7 +20,7 @@ class BurgerBoy {
 
     this.guy.anchor.set(0.5);
     this.guy.x = this.app.screen.width / 6;
-    this.guy.y = this.app.screen.height / 1.63;
+    this.guy.y = this.app.screen.height / 1.4;
 
     // Start the game loop
     this.app.ticker.add(delta => this.move(delta));
@@ -33,29 +32,29 @@ class BurgerBoy {
     if (!(window.state === "play")) {
       // this.guy.vx = 0;
       // this.guy.vy = 0;
-      if (key.isPressed("left")) {
-        this.guy.scale.x = -1;
-        this.guy.vx = -2.5;
-      }
+      // if (key.isPressed("left")) {
+      //   this.guy.scale.x = -1;
+      //   this.guy.vx = -2.5;
+      // }
       
-      if (key.isPressed("right")) {
-        this.guy.scale.x = 1;
-        this.guy.vx = 2.5;
-      }
+      // if (key.isPressed("right")) {
+      //   this.guy.scale.x = 1;
+      //   this.guy.vx = 2.5;
+      // }
   
-      if (key.isPressed("up")) {
-        this.guy.vy = 1.5;
-      }
+      // if (key.isPressed("up")) {
+      //   this.guy.vy = 1.5;
+      // }
   
-      if (key.isPressed("down")) {
-        this.guy.vy = -1.5;
-      }
+      // if (key.isPressed("down")) {
+      //   this.guy.vy = -1.5;
+      // }
   
-      if (key.isPressed("space")) {
-        if (this.guy.vy === 0) {
-          this.guy.vy = 6;
-        }
-      }
+      // if (key.isPressed("space")) {
+      //   if (this.guy.vy === 0) {
+      //     this.guy.vy = 6;
+      //   }
+      // }
   
       // -----------------------------------------------------------------------------------------------
       // display animation logic
