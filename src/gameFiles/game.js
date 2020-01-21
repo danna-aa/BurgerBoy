@@ -1,22 +1,29 @@
 import BurgerBoy from "./burgerBoy";
 import Platform from "./platform";
 import Background from "./background";
+import { hitTest } from "../scripts/functions/hitTest";
 
 class Game {
   constructor(app) {
     this.app = app;
     this.placementX = 0;
     this.placementY = 250;
+    this.platforms = [];
+    this.burgerBoy = null;
   }
 
   setup() {
     let background = new Background(this.app);
     background.add();
 
+    this.burgerBoy = new BurgerBoy(this.app);
+    this.burgerBoy.add();
+
     this.addPlatforms();
 
-    let burgerBoy = new BurgerBoy(this.app);
-    burgerBoy.add();
+
+    // this.app.ticker.add(delta => this.gameLoop(delta));
+
   }
 
   randomizeY() {
@@ -41,13 +48,34 @@ class Game {
   }
 
   addPlatform() {
-    let platform = new Platform(this.app);
+    let platform = new Platform(this.app, this.burgerBoy);
     platform.add(this.placementX, this.placementY);
+    this.platforms.push(platform);
     this.placementX += 220;
     this.randomizeY();
   }
 
 
-}
+  // gameLoop(delta) {
+  //   // requestAnimationFrame(gameLoop);
+  //   // state(delta);
+
+  //   console.log("gameloop")
+  //   this.platforms.forEach(platform => {
+  //     if (hitTest(this.burgerBoy.guy, platform.sprite)) {
+  //       console.log("collision!");
+  //     } else {
+  //       console.log("no collision...");
+  //     }
+  //   });
+
+  // }
+
+};
+
+
+
+
+
 
 export default Game;

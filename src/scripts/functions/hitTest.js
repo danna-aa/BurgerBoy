@@ -1,4 +1,4 @@
-export function hitTestRectangle = (r1, r2) => {
+export const hitTest = (r1, r2) => {
   //Define the variables we'll need to calculate
   let hit, combinedHalfWidths, combinedHalfHeights, vx, vy;
 

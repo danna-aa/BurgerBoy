@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let game = new Game(app);
 
+
+
   PIXI.Loader.shared
     .add("burgerBoy", "../src/assets/characters/burgerBoy/guy.json")
     .add("platform", "../src/assets/levels/landing.png")
