@@ -17,7 +17,8 @@ class Platform {
     this.sprite = new PIXI.Sprite(this.texture);
     this.sprite.x = placementX;
     this.sprite.y = placementY;
-    this.sprite.anchor.set(0, 0.5);
+    // this.sprite.anchor.set(0, 0.5);
+    this.sprite.anchor.set(0, 1.7);
 
     
     // this.container = new PIXI.Container();

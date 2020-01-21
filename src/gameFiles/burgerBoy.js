@@ -18,7 +18,7 @@ class BurgerBoy {
     this.guy.play();
     this.app.stage.addChild(this.guy);
 
-    this.guy.anchor.set(0.5);
+    this.guy.anchor.set(0.5, 0.55);
     this.guy.x = this.app.screen.width / 6;
     this.guy.y = this.app.screen.height / 1.4;
 
