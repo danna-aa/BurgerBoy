@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Burger Boy</title>
+  <title>Runner Boy</title>
   <link rel="icon" type="image/ico" href="../src/assets/icons/burgerFavicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Monoton|PT+Mono|Press+Start+2P|Unica+One&display=swap"
   rel="stylesheet">
@@ -23,13 +23,24 @@
   
   <div id="root">
     
-    <div class="title">
-      Burger Boy
+    <div class="header">
+      <div class="title">
+        Runner Boy
+      </div>
       <div id="start-button-container">
-        <img class="start-button" src="../src/assets/icons/startButton.png" alt="start-button">
+        <div class="start-html">
+          Start
+        </div>
+        <!-- <img class="start-button" src="../src/assets/icons/startButton.png" alt="start-button"> -->
       </div>
     </div>
     <div id="game"></div>
+    <div class="info">
+      <div>Press [ Space ] to Jump </div>
+      <div id="deaths">Deaths: 0 </div>
+      <div id="score">Score: 0</div>
+      <div id="high-score">High Score: 0</div>
+    </div>
   </div>
 
 </body>
