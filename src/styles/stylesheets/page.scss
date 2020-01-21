@@ -92,15 +92,35 @@ body {
   height: 120px;
   font-family: 'Press Start 2P', cursive;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgba(235, 174, 167, 0.863);
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(235, 174, 167);
   color: #26546A;
   border: 3px solid #26546A;
 }
 
 .info * {
   font-size: 20px;
+}
+
+.info .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.burger-1 {
+  width: 120px;
+  object-fit: cover;
+  opacity: 0.7;
+  border-right: 3px solid #26546A;
+}
+
+.burger-2 {
+  width: 120px;
+  object-fit: cover;
+  opacity: 0.7;
+  border-left: 3px solid #26546A;
 }
 
