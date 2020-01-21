@@ -20,6 +20,27 @@ body {
   align-items: center;
 }
 
+.start-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-button {
+  // position: absolute;
+  // top: 50px;
+  // left: 50px;
+  width: 200px;
+  opacity: 90%;
+  transition: 300ms ease;
+}
+
+.start-button:hover {
+  opacity: 100%;
+  transition: 300ms ease;
+
+}
+
 #game {
   // border: 2px solid #061214;
   // height: fit-content;
@@ -27,14 +48,17 @@ body {
 }
 
 .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   font-family: 'Press Start 2P', cursive;
-
+  width: 1000px;
   font-weight: 700;
-  font-size: 6vw;
+  font-size: 70px;
   color: #F6E0C0;
   margin: 3vw;
   -webkit-text-stroke-width: 0.1vw;
   -webkit-text-stroke-color: #061214;
-  
 }
 
