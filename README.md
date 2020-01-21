@@ -5,4 +5,4 @@
 ![](https://media.giphy.com/media/Qs7mDvmAzVpJNRcdO5/giphy.gif)
 
 ## About
-Burger Boy is a side-scroller game developed in Javascript. 
+BurgerBoy is a side-scroller game developed in Javascript. 
