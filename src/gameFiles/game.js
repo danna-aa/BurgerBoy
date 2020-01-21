@@ -87,9 +87,10 @@ class Game {
         document.getElementById("high-score").innerText = `High Score: ${this.highscore}`;
       }
       this.score = 0;
-    } else if (player.y < 0) {
-      player.y = 600;
-    }
+    } 
+    // else if (player.y < -100) {
+      // player.y = 600;
+    // }
   };
 
   displayPoints() {
