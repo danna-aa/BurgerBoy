@@ -45,13 +45,14 @@ class Platform {
       //   this.sprite.position.x -= 4.25;
       // }
 
-              this.sprite.position.x -= 3.5;
+      this.sprite.position.x -= 3.5;
 
 
     } 
     if (hitTest(this.burgerBoy.guy, this.sprite)) {
       // console.log("collision!");
-      this.burgerBoy.isOnPlatform();
+      
+      this.burgerBoy.isOnPlatform(this.sprite.y);
       // if (this.counted === false) {
       //   this.counted = true;
         

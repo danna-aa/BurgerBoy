@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let app = new PIXI.Application({
     width: 500,
-    height: 300,
+    height: 320,
     // antialias: true,
     // transparent: false,
     resolution: 2,

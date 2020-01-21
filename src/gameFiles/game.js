@@ -31,9 +31,9 @@ class Game {
 
   randomizeY() {
     let posOrNeg;
-    if (this.placementY >= 216) {
+    if (this.placementY >= 226) {
       posOrNeg = -1;
-    } else if (this.placementY <= 215) {
+    } else if (this.placementY <= 195) {
       posOrNeg = 1;
     } else {
       posOrNeg = Math.random() < 0.5 ? -1 : 1;
@@ -67,7 +67,7 @@ class Game {
     //   this.placementX += 310;
     // }
 
-    this.placementX += 280;
+    this.placementX += 300;
 
     this.randomizeY();
   }
