@@ -6,7 +6,7 @@ import { hitTest } from "../scripts/functions/hitTest";
 class Game {
   constructor(app) {
     this.app = app;
-    this.placementX = 70;
+    this.placementX = 80;
     this.placementY = 250;
     this.platforms = [];
     this.burgerBoy = null;
