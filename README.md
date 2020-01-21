@@ -1,6 +1,6 @@
 # BurgerBoy
 
-[Play Burger Boy!](https://danna-aa.github.io/BurgerBoy/dist/index.html)
+[Play BurgerBoy](https://danna-aa.github.io/BurgerBoy/dist/index.html)
 
 ![](https://media.giphy.com/media/Qs7mDvmAzVpJNRcdO5/giphy.gif)
 
