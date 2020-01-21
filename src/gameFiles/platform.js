@@ -49,13 +49,12 @@ class Platform {
 
     } 
     if (hitTest(this.burgerBoy.guy, this.sprite)) {
-      console.log("collision!");
+      // console.log("collision!");
       this.burgerBoy.isOnPlatform();
       // if (this.counted === false) {
       //   this.counted = true;
         
       // }
-      console.log(window.cunter);
       // this.burgerBoy.isOnPlatform();
       
       // console.log("platformed =");

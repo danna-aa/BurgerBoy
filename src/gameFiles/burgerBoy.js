@@ -29,7 +29,7 @@ class BurgerBoy {
   move(delta) {
 
 
-    if (!(window.state === "play")) {
+    if (window.state === "start" || window.state === "pause") {
       // this.guy.vx = 0;
       // this.guy.vy = 0;
       // if (key.isPressed("left")) {
@@ -55,6 +55,7 @@ class BurgerBoy {
       //     this.guy.vy = 6;
       //   }
       // }
+      this.guy.play();
   
       // -----------------------------------------------------------------------------------------------
       // display animation logic
@@ -82,7 +83,7 @@ class BurgerBoy {
       this.guy.x += this.guy.vx;
       this.guy.y -= this.guy.vy;
 
-    } else {  
+    } else if (window.state === "play") {  
 
       this.guy.scale.x = 1;
       this.guy.play();
@@ -163,8 +164,8 @@ class BurgerBoy {
       this.guy.y = this.guy.y;
 
       // this.guy.vy += 1;
-      console.log(this.guy.vy);
-      console.log(this.guy.y);
+      // console.log(this.guy.vy);
+      // console.log(this.guy.y);
 
       if (key.isPressed("space")) {
         if (this.guy.vy === 0) {

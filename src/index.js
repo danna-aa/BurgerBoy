@@ -42,8 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#start-button-container").click(function() {
     if (!(window.state === "play")) {
       window.state = "play";
+      $(".start-html").html("Pause");
     } else {
-      window.state = "pause";
+      window.state = "start";
+      $(".start-html").html("Start");
+
     }
     
   });

@@ -11,6 +11,10 @@ class Game {
     this.platforms = [];
     this.burgerBoy = null;
     this.count = -1;
+    this.score = 0;
+    this.highscore = 0;
+    this.deaths = 0;
+    
   }
 
   setup() {
@@ -22,19 +26,17 @@ class Game {
 
     this.addPlatforms();
 
-
-    // this.app.ticker.add(delta => this.gameLoop(delta));
-
+    this.app.ticker.add(delta => this.gameLoop(delta));
   }
 
   randomizeY() {
-    let posOrNeg; 
-    if ( this.placementY >= 170 ) {
+    let posOrNeg;
+    if (this.placementY >= 221) {
       posOrNeg = -1;
-    } else if ( this.placementY <= 150 ) {
+    } else if (this.placementY <= 220) {
       posOrNeg = 1;
     } else {
-      posOrNeg = (Math.random() < 0.5 ? -1 : 1);
+      posOrNeg = Math.random() < 0.5 ? -1 : 1;
       // posOrNeg = 1;
     }
 
@@ -43,7 +45,8 @@ class Game {
   }
 
   addPlatforms() {
-    while (this.placementX < 10000) { // 500 = level width
+    while (this.placementX < 1000000) {
+      // 500 = level width
       this.addPlatform();
     }
   }
@@ -51,7 +54,8 @@ class Game {
   addPlatform() {
     let platform = new Platform(this.app, this.burgerBoy, this.count);
     platform.add(this.placementX, this.placementY);
-    this.count += 1
+    // this.count += 1;
+    // console.log(this.count);
     // this.platforms.push(platform);
     // if (this.count < 20) {
     //   this.placementX += 220;
@@ -66,25 +70,50 @@ class Game {
     this.placementX += 280;
 
     this.randomizeY();
-    
   }
 
+  wrap(player) {
+    if (player.x > 1000) {
+      player.x = 1;
+    } else if (player.x < 0) {
+      player.x = 999;
+    } else if (player.y > 1000) {
+      player.y = 1;
+      player.vy = -1;
+      this.deaths += 1;
+      document.getElementById("deaths").innerText = `Deaths: ${this.deaths}`;
+      if (this.score > this.highscore) {
+        this.highscore = this.score;
+        document.getElementById("high-score").innerText = `High Score: ${this.highscore}`;
+      }
+      this.score = 0;
+    } else if (player.y < 0) {
+      player.y = 600;
+    }
+  };
 
-  // gameLoop(delta) {
-  //   // requestAnimationFrame(gameLoop);
-  //   // state(delta);
+  displayPoints() {
+    this.score++;
+    document.getElementById("score").innerText = `Score: ${this.score}`;
+  }
 
-  //   console.log("gameloop")
-  //   this.platforms.forEach(platform => {
-  //     if (hitTest(this.burgerBoy.guy, platform.sprite)) {
-  //       console.log("collision!");
-  //     } else {
-  //       console.log("no collision...");
-  //     }
-  //   });
+  gameLoop(delta) {
+    // requestAnimationFrame(gameLoop);
+    // state(delta);
 
-  // }
-
+    // console.log("gameloop")
+    // this.platforms.forEach(platform => {
+    //   if (hitTest(this.burgerBoy.guy, platform.sprite)) {
+    //     console.log("collision!");
+    //   } else {
+    //     console.log("no collision...");
+    //   }
+    // });
+    if (window.state === "play") {
+      this.wrap(this.burgerBoy.guy);
+      this.displayPoints();
+    }
+  }
 };
 
 
