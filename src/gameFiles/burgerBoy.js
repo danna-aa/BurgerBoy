@@ -18,7 +18,7 @@ class BurgerBoy {
     this.guy.play();
     this.app.stage.addChild(this.guy);
 
-    this.guy.anchor.set(0.5, 0.5);
+    this.guy.anchor.set(0, 0.5);
     this.guy.x = this.app.screen.width / 6;
     this.guy.y = this.app.screen.height / 1.48;
 
@@ -28,7 +28,7 @@ class BurgerBoy {
 
   move(delta) {
 
-    console.log(window.state);
+    // console.log(window.state);
     if (window.state === "start" || window.state === "pause") {
       // this.guy.vx = 0;
       // this.guy.vy = 0;
@@ -105,6 +105,8 @@ class BurgerBoy {
         this.guy.vy = 0;
       } else {
         this.guy.vy -= 0.2;
+        // this.guy.vy -= 0.3;
+        // this.guy.vy -= 0.5;
       }
       // this.guy.vy -= 0.1;
 
@@ -172,6 +174,8 @@ class BurgerBoy {
         if (key.isPressed("space")) {
           if (this.guy.vy === 0) {
             this.guy.vy = 6;
+            // this.guy.vy = 8;
+            // this.guy.vy = 15;
             // return;
           }
         } else {

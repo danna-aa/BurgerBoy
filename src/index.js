@@ -46,9 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       window.state = "start";
       $(".start-html").html("Start");
-
     }
-    
+  });
+
+  $("body").keyup(function(e) {
+    if (e.keyCode === 80) {
+      if (!(window.state === "start")) {
+        window.state = "start";
+        $(".start-html").html("Start");
+      } else {
+        window.state = "play";
+        $(".start-html").html("Pause");
+      }
+
+    } else if (!(window.state === "play") && e.keyCode === 13) {
+      window.state = "play";
+      $(".start-html").html("Pause");
+    }
   });
 });
 
