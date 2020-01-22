@@ -14,6 +14,7 @@ class Game {
     this.burgerBoy = null;
     this.count = -1;
     this.score = 0;
+    this.burgersEaten = 0;
     this.highscore = 0;
     this.deaths = 0;
   }
@@ -98,11 +99,13 @@ class Game {
       player.vy = -1;
       this.deaths += 1;
       document.getElementById("deaths").innerText = `Deaths: ${this.deaths}`;
-      if (this.score > this.highscore) {
-        this.highscore = this.score;
+      let finalscore = this.score + this.burgersEaten * 300
+      if (finalscore > this.highscore) {
+        this.highscore = finalscore;
         document.getElementById("high-score").innerText = `High Score: ${this.highscore}`;
       }
       this.score = 0;
+      this.burgersEaten = 0;
     } 
     // else if (player.y < -100) {
       // player.y = 600;
@@ -112,6 +115,7 @@ class Game {
   displayPoints() {
     this.score++;
     document.getElementById("score").innerText = `Score: ${this.score}`;
+    document.getElementById("burgers-eaten").innerText = `Burgers: ${this.burgersEaten}`;
   }
 
   gameLoop(delta) {

@@ -5,6 +5,7 @@ class Burger {
     this.app = app;
     this.burgerBoy = burgerBoy;
     this.count = count;
+    this.game = game;
 
     this.spritesheet = null;
     this.srite = null;
@@ -13,6 +14,8 @@ class Burger {
     this.trig = Math.random() < 0.5 ? "sin" : "cos";
     this.amp = Math.floor(Math.random() * 60);
     this.freq = Math.random() * 0.2;
+
+    this.ateBurger = false;
   }
 
   add(placementX, placementY) {
@@ -45,10 +48,18 @@ class Burger {
     }
 
     if (hitTest(this.burgerBoy.guy, this.sprite)) {
-      console.log("Burger!");
-    } else {
-
+      this.eatBurger();
     }
+  }
+
+  eatBurger() {
+    console.log(this.game.burgersEaten);
+    this.app.stage.removeChild(this.sprite);
+    if (!this.ateBurger) {
+      this.ateBurger = true;
+      this.game.burgersEaten += 1;
+    }
+    return;
   }
 }
 
