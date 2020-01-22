@@ -1,6 +1,8 @@
 import BurgerBoy from "./burgerBoy";
 import Platform from "./platform";
 import Background from "./background";
+import Thanks from "./thanks";
+import Burger from "./burger";
 import { hitTest } from "../scripts/functions/hitTest";
 
 class Game {
@@ -14,7 +16,6 @@ class Game {
     this.score = 0;
     this.highscore = 0;
     this.deaths = 0;
-    
   }
 
   setup() {
@@ -24,7 +25,7 @@ class Game {
     this.burgerBoy = new BurgerBoy(this.app);
     this.burgerBoy.add();
 
-    this.addPlatforms();
+    this.addAssets();
 
     this.app.ticker.add(delta => this.gameLoop(delta));
   }
@@ -44,10 +45,14 @@ class Game {
     // this.placementY += 100 * posOrNeg;
   }
 
-  addPlatforms() {
+  addAssets() {
     while (this.placementX < 1000000) {
-      // 500 = level width
+    // while (this.placementX < 1000) {
       this.addPlatform();
+      this.addBurger();
+    }
+    if (this.placementX >= 1000) {
+      this.addThanks();
     }
   }
 
@@ -70,6 +75,17 @@ class Game {
     this.placementX += 300;
 
     this.randomizeY();
+  }
+
+  addBurger() {
+    let burger = new Burger(this.app, this.burgerBoy, this.count, this);
+    burger.add(this.placementX + 230, this.placementY - 120);
+  }
+
+  addThanks() {
+    let thanks = new Thanks(this.app, this.burgerBoy, this.count);
+    this.placementX += 300;
+    thanks.add(this.placementX, 150);
   }
 
   wrap(player) {

@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .add("background3", "../src/assets/background/3.png")
     .add("background4", "../src/assets/background/4.png")
     .add("background5", "../src/assets/background/5.png")
+    .add("thanks", "../src/assets/levels/thanks.png")
+    .add("burger", "../src/assets/props/burger/burger.json")
     .load(() => game.setup());
 
   window.state = "start";
