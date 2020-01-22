@@ -14,6 +14,7 @@ class Burger {
     this.trig = Math.random() < 0.5 ? "sin" : "cos";
     this.amp = Math.floor(Math.random() * 60);
     this.freq = Math.random() * 0.2;
+    this.posOrNeg = (Math.random() < 0.5 ? -1 : 1) * Math.random() * 50;
 
     this.ateBurger = false;
   }
@@ -39,9 +40,9 @@ class Burger {
       this.sprite.position.x -= 3.5;
 
       if (this.trig === "sin") {
-        this.sprite.position.y = placementY + (1 + Math.sin(this.wiggle * this.freq) * this.amp);
+        this.sprite.position.y = placementY + this.posOrNeg + (1 + Math.sin(this.wiggle * this.freq) * this.amp);
       } else {
-        this.sprite.position.y = placementY + (1 + Math.cos(this.wiggle * this.freq) * this.amp);
+        this.sprite.position.y = placementY + this.posOrNeg + (1 + Math.cos(this.wiggle * this.freq) * this.amp);
       }
 
       this.wiggle += 1;
