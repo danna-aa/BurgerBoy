@@ -35,7 +35,7 @@ class Platform {
 
   move(delta, placementY) {
     // this.sprite.vx = 1;
-    // this.sprite
+
     if (window.state === "play") {
       // if (this.count <= 20) {
       //   this.sprite.position.x -= 2;
@@ -50,13 +50,13 @@ class Platform {
       this.sprite.position.x -= 3.5;
 
       
-      // if (this.trig === "sin") {
-      //   this.sprite.position.y = placementY + (1 + Math.sin(this.wiggle * 0.2) * 8); 
-      // } else {
-      //   this.sprite.position.y = placementY + (1 + Math.cos(this.wiggle * 0.2) * 8); 
-      // }
+      if (this.trig === "sin") {
+        this.sprite.position.y = placementY + (1 + Math.sin(this.wiggle * 0.2) * 8); 
+      } else {
+        this.sprite.position.y = placementY + (1 + Math.cos(this.wiggle * 0.2) * 8); 
+      }
 
-      // this.wiggle += 1;
+      this.wiggle += 1;
     }
 
 
