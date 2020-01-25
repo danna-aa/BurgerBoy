@@ -39,7 +39,6 @@ class Game {
       posOrNeg = 1;
     } else {
       posOrNeg = Math.random() < 0.5 ? -1 : 1;
-      // posOrNeg = 1;
     }
 
     this.placementY += Math.floor(Math.random() * 100) * posOrNeg;
