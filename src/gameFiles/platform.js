@@ -22,7 +22,6 @@ class Platform {
 
     this.sprite.anchor.set(0, 1.7);
 
-    
     // this.container = new PIXI.Container();
     // this.container.addChild(this.sprite);
     this.app.stage.addChild(this.sprite);
