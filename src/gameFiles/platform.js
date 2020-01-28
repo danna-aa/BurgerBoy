@@ -33,7 +33,6 @@ class Platform {
 
   move(delta, placementY) {
     // this.sprite.vx = 1;
-
     if (window.state === "play") {
       // if (this.count <= 20) {
       //   this.sprite.position.x -= 2;
@@ -44,7 +43,6 @@ class Platform {
       // } else {
       //   this.sprite.position.x -= 4.25;
       // }
-
       this.sprite.position.x -= 3.5;
 
       
