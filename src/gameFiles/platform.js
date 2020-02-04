@@ -24,6 +24,7 @@ class Platform {
 
     // this.container = new PIXI.Container();
     // this.container.addChild(this.sprite);
+    
     this.app.stage.addChild(this.sprite);
 
     this.app.ticker.add(delta => this.move(delta, placementY));
