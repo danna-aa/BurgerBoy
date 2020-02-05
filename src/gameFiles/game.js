@@ -27,7 +27,6 @@ class Game {
     this.burgerBoy.add();
 
     this.addAssets();
-
     this.app.ticker.add(delta => this.gameLoop(delta));
   }
 
