@@ -8,7 +8,6 @@ class Platform {
     this.state = null;
     this.container = null;
     this.burgerBoy = burgerBoy;
-    
     // this.counted = false;
     this.count = count;
     this.wiggle = 0;
