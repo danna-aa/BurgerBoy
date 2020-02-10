@@ -54,7 +54,6 @@ class Game {
       this.addThanks();
     }
   }
-  
 
   addPlatform() {
     let platform = new Platform(this.app, this.burgerBoy, this.count);
