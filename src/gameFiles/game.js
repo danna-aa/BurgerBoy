@@ -71,7 +71,6 @@ class Game {
     //   this.placementX += 310;
     // }
     this.placementX += 300;
-
     this.randomizeY();
   }
 
