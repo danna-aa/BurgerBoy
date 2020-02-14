@@ -73,6 +73,7 @@ class Game {
     this.placementX += 300;
     this.randomizeY();
   }
+  
 
   addBurger() {
     let burger = new Burger(this.app, this.burgerBoy, this.count, this);
